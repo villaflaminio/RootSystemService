@@ -46,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PipeComunication\Client\NPClient.cs" />
-    <Compile Include="PipeComunication\Interfaces\ICommunication.cs" />
-    <Compile Include="PipeComunication\Interfaces\IPipeClient.cs" />
-    <Compile Include="PipeComunication\Interfaces\IPipeServer.cs" />
     <Compile Include="logging\ColoredMessageConverter.cs" />
     <Compile Include="logging\ILogExtentions.cs" />
     <Compile Include="logging\MessageConverter.cs" />
-    <Compile Include="PipeComunication\Server\ComunicationHelper.cs" />
+    <Compile Include="PipeComunication\Client\NPClient.cs" />
+    <Compile Include="PipeComunication\eventClass\ClientConnectedEventArgs.cs" />
+    <Compile Include="PipeComunication\eventClass\ClientDisconnectedEventArgs.cs" />
+    <Compile Include="PipeComunication\eventClass\ClientMessageReceivedEventArgs.cs" />
+    <Compile Include="PipeComunication\eventClass\ServerMessageReceivedEventArgs.cs" />
+    <Compile Include="PipeComunication\Interfaces\ICommunication.cs" />
+    <Compile Include="PipeComunication\Interfaces\IPipeClient.cs" />
+    <Compile Include="PipeComunication\Interfaces\IPipeServer.cs" />
     <Compile Include="PipeComunication\Server\InternalPipeServer.cs" />
     <Compile Include="PipeComunication\Server\NPServer.cs" />
     <Compile Include="PipeComunication\Utilities\BufferReading.cs" />
@@ -67,5 +70,6 @@
     <None Include="logging\log4net.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

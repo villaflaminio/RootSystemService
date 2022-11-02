@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using log4net;
 using st.rulesystem.sdk.logging;
+using st.rulesystem.sdk.PipeComunication.eventClass;
 using st.rulesystem.sdk.PipeComunication.Interfaces;
 using st.rulesystem.sdk.PipeComunication.Utilities;
 

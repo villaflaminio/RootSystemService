@@ -1,4 +1,5 @@
-﻿using System;
+﻿using st.rulesystem.sdk.PipeComunication.eventClass;
+using System;
 
 namespace st.rulesystem.sdk.PipeComunication.Interfaces
 {
@@ -30,10 +31,6 @@ namespace st.rulesystem.sdk.PipeComunication.Interfaces
         /// <returns>A task of TaskResult</returns>
         void SendMessage(string clientID, object message);
     }
-    public class ServerMessageReceivedEventArgs : EventArgs
-    {
-        public string ClientId { get; set; }
-        public object Message { get; set; }
-    }
+ 
 
 }

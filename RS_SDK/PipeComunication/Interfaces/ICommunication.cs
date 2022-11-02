@@ -15,16 +15,4 @@ namespace st.rulesystem.sdk.PipeComunication.Interfaces
         /// </summary>
         void Stop();
     }
-
-    public class ClientConnectedEventArgs : EventArgs
-    {
-        public string ClientId { get; set; }
-    }
-
-    public class ClientDisconnectedEventArgs : EventArgs
-    {
-        public string ClientId { get; set; }
-    }
-
-
 }
