@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootSystemService", "RootSystemService\RootSystemService.csproj", "{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS_SDK", "RS_SDK\RS_SDK.csproj", "{0EE304D7-9475-4646-9C22-B0D61BCD4414}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{6B037DD8-8DBD-4B70-80FE-08B44454ED60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuleSystemService", "RuleSystemService\RuleSystemService.csproj", "{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0EE304D7-9475-4646-9C22-B0D61BCD4414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0EE304D7-9475-4646-9C22-B0D61BCD4414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EE304D7-9475-4646-9C22-B0D61BCD4414}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{6B037DD8-8DBD-4B70-80FE-08B44454ED60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B037DD8-8DBD-4B70-80FE-08B44454ED60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B037DD8-8DBD-4B70-80FE-08B44454ED60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

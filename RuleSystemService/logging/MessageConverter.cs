@@ -3,16 +3,15 @@ using System.IO;
 using log4net.Core;
 using log4net.Layout.Pattern;
 
-namespace RootSystemService.logging
+namespace st.rulesystemservice.logging
 {
     /// <summary>
-    ///     Convert compute the logging messages, fully customizable, instead of xml configuration.
+    ///     Compute the logging messages, fully customizable, instead of xml configuration.
     /// </summary>
-    public class ColoredMessageConverter : PatternLayoutConverter
+    public class MessageConverter : PatternLayoutConverter
     {
         protected override void Convert(TextWriter writer, LoggingEvent loggingEvent)
         {
-            Console.Write("{0} | {1} ", DateTime.Now.ToString(), loggingEvent.LoggerName);
             switch (loggingEvent.Level.Name)
             {
                 case "DEBUG":
@@ -33,13 +32,14 @@ namespace RootSystemService.logging
                     Console.BackgroundColor = ConsoleColor.White;
                     break;
             }
-            Console.Write("{0} " , loggingEvent.Level);
 
+            writer.Write("{0}", loggingEvent.Level);
 
             // Reset Console Colors.
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.Write(" | {0} \n", loggingEvent.RenderedMessage);
+
+            writer.Write(" | {0} \n", loggingEvent.RenderedMessage);
         }
     }
 }

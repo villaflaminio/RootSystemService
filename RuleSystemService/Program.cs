@@ -1,15 +1,12 @@
-﻿using log4net;
-using log4net.Config;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+using log4net;
+using log4net.Config;
 
-namespace RootSystemService
+namespace st.rulesystemservice
 {
     internal static class Program
     {
@@ -39,7 +36,7 @@ namespace RootSystemService
             ServicesToRun = new ServiceBase[]
             {
 
-                new RootSystemService()
+                new RuleSystemService()
             };
             ServiceBase.Run(ServicesToRun);
         }

@@ -1,6 +1,6 @@
-﻿namespace RootSystemService
+﻿namespace st.rulesystemservice
 {
-    partial class RootSystemService
+    partial class RuleSystemService
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             // 
-            // RootSystemService
+            // RuleSystemService
             // 
             this.CanShutdown = true;
-            this.ServiceName = "RootSystemService";
+            this.ServiceName = "RuleSystemService";
 
         }
 

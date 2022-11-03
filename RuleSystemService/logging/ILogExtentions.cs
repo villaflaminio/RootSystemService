@@ -3,7 +3,7 @@ using System.Reflection;
 using log4net;
 using log4net.Core;
 
-namespace RootSystemService.logging
+namespace st.rulesystemservice.logging
 {
     public static class ILogExtentions
     {

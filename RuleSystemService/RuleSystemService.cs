@@ -1,25 +1,16 @@
-﻿using log4net;
-using RootSystemService.logging;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.ServiceProcess;
+using log4net;
 using st.rulesystem.sdk.PipeComunication.Interfaces;
 using st.rulesystem.sdk.PipeComunication.Server;
 using st.rulesystem.sdk.PipeComunication.Utilities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
-using static RootSystemService.RootSystemService;
 
-namespace RootSystemService
+namespace st.rulesystemservice
 {
-    public partial class RootSystemService : ServiceBase
+    public partial class RuleSystemService : ServiceBase
     {
-        private static readonly ILog _logger = LogManager.GetLogger(typeof(RootSystemService));
+        private static readonly ILog _logger = LogManager.GetLogger(typeof(RuleSystemService));
 
         // Enum to specify the different states that the service could assume.
         public enum ServiceState
@@ -50,7 +41,7 @@ namespace RootSystemService
         private static extern bool SetServiceStatus(IntPtr handle, ref ServiceStatus serviceStatus);
 
 
-        public RootSystemService()
+        public RuleSystemService()
         {
             try
             {
@@ -68,7 +59,7 @@ namespace RootSystemService
             try
             {
                 // Logging method enter
-                _logger.Debug("Enter method DbLoaderService.OnStart");
+                _logger.Debug("Enter method RuleSystemService.OnStart");
 
                 IPipeServer _server = new NPServer("elis_pipe", 100);
                 _server.Start();
@@ -94,13 +85,10 @@ namespace RootSystemService
                     _logger.Info("Client connected " + argss.ClientId);
                 };
 
-                // Log start of DbLoader.
                 ServiceStatus serviceStatus = new ServiceStatus();
                 serviceStatus.dwCurrentState = ServiceState.SERVICE_RUNNING;
                 SetServiceStatus(ServiceHandle, ref serviceStatus);
 
-                // Retrieve singleton instance of DbLoader.
-                _logger.Debug("Instantiating DbLoader");
             }
             catch (Exception e)
             {
@@ -115,7 +103,7 @@ namespace RootSystemService
             try
             {
                 // Logging method enter
-                _logger.Debug("Enter method DbLoaderService.OnStop");
+                _logger.Debug("Enter method RuleSystemService.OnStop");
 
                 // Update the service state to Stop Pending.
                 ServiceStatus serviceStatus = new ServiceStatus();

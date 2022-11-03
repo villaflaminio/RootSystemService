@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0DD508A9-F95B-4BD5-AE46-5E4209285DEB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RootSystemService</RootNamespace>
-    <AssemblyName>RootSystemService</AssemblyName>
+    <RootNamespace>st.rulesystemservice</RootNamespace>
+    <AssemblyName>RuleSystemService</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,13 +25,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -62,11 +63,11 @@
     <Compile Include="ProjectInstaller.Designer.cs">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="RootSystemService.cs">
+    <Compile Include="RuleSystemService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RootSystemService.Designer.cs">
-      <DependentUpon>RootSystemService.cs</DependentUpon>
+    <Compile Include="RuleSystemService.Designer.cs">
+      <DependentUpon>RuleSystemService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +83,8 @@
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RootSystemService.resx">
-      <DependentUpon>RootSystemService.cs</DependentUpon>
+    <EmbeddedResource Include="RuleSystemService.resx">
+      <DependentUpon>RuleSystemService.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

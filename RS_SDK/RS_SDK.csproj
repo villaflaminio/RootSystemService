@@ -63,7 +63,6 @@
     <Compile Include="PipeComunication\Utilities\EventHandlerExtensions.cs" />
     <Compile Include="PipeComunication\Utilities\PipeMessage.cs" />
     <Compile Include="PipeComunication\Utilities\TaskResult.cs" />
-    <Compile Include="TFCSInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

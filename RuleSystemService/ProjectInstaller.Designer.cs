@@ -1,4 +1,4 @@
-﻿namespace RootSystemService
+﻿namespace st.rulesystemservice
 {
     partial class ProjectInstaller
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.RootSystemServiceInstaller = new System.ServiceProcess.ServiceInstaller();
+            this.RuleSystemServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
             // serviceProcessInstaller1
             // 
@@ -38,25 +38,25 @@
             this.serviceProcessInstaller1.Username = null;
             this.serviceProcessInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceProcessInstaller1_AfterInstall_1);
             // 
-            // RootSystemServiceInstaller
+            // RuleSystemServiceInstaller
             // 
-            this.RootSystemServiceInstaller.Description = "RootSystemService by elis";
-            this.RootSystemServiceInstaller.DisplayName = "RootSystemService";
-            this.RootSystemServiceInstaller.ServiceName = "RootSystemService";
-            this.RootSystemServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
-            this.RootSystemServiceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall_1);
+            this.RuleSystemServiceInstaller.Description = "RuleSystemService by elis";
+            this.RuleSystemServiceInstaller.DisplayName = "RuleSystemService";
+            this.RuleSystemServiceInstaller.ServiceName = "RuleSystemService";
+            this.RuleSystemServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.RuleSystemServiceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall_1);
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
-            this.RootSystemServiceInstaller});
+            this.RuleSystemServiceInstaller});
 
         }
 
         #endregion
 
         private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller RootSystemServiceInstaller;
+        private System.ServiceProcess.ServiceInstaller RuleSystemServiceInstaller;
     }
 }
